@@ -18,23 +18,24 @@ class MainActivity : ComponentActivity() {
         setContent {
             ComposePracticeTheme {
                 // A surface container using the 'background' color from the theme
-              Greeting(name = "Hello")
+                Greeting(name = "Hello")
+            }
         }
     }
-}
 
-@Composable
-fun Greeting(name: String, modifier: Modifier = Modifier) {
-    Text(
-        text = "Hello $name!",
-        modifier = modifier
-    )
-}
+    @Composable
+    fun Greeting(name: String, modifier: Modifier = Modifier) {
+        Text(
+            text = "Hello $name!",
+            modifier = modifier
+        )
+    }
 
-@Preview(showBackground = true)
-@Composable
-fun GreetingPreview() {
-    ComposePracticeTheme {
-        Greeting("Android")
+    @Preview(showBackground = true)
+    @Composable
+    fun GreetingPreview() {
+        ComposePracticeTheme {
+            Greeting("Android")
+        }
     }
 }
